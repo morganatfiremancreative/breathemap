@@ -36,7 +36,7 @@ content_FeaturePlot_Information =
        "histogram and density plot.)",
        br(),
        "A vertical arrow shows the value of the feature for the selected tract or community.",
-
+       
        br(),
        br(),
        h5('Multiple tracts:'),
@@ -48,20 +48,20 @@ content_FeaturePlot_Information =
        br(),
        br(),
        "If '...total' is selected, then the tract results are combined by adding.",
-      br(),
-'In that case, the total is written along the top of the graph,',
-br(),
-'with the number of tracts contributing.',
-br(),
-'The total might be larger than the right hand side of the feature axis.',
-br(),
-"This is indicated by a horizontal green arrow reaching to the right hand side.
+       br(),
+       'In that case, the total is written along the top of the graph,',
+       br(),
+       'with the number of tracts contributing.',
+       br(),
+       'The total might be larger than the right hand side of the feature axis.',
+       br(),
+       "This is indicated by a horizontal green arrow reaching to the right hand side.
 ",
        br(),      br(),
-
+       
        h5("Outlier handling:"),
        indentMe(
-
+         
          "When '...total' is selected and 'communities' is selected,",
          br(),
          "Outliers not on the graph ",
@@ -83,7 +83,7 @@ br(),
          "Type capital ", strong('O'), " for a popover to open the outlier quantile dialog",
          br(),  ' while setting the outlier quantile (no  outlier handling). ',
          br()
-
+         
        )
   )
 #  ,      HTML(paste(rep('-', 50)) )  NEEDED only if popover on the left.
@@ -115,10 +115,10 @@ content_TotalOrRates_Information =
       "the rescaling is done combining  ",
       br(),
       "across the communities currently selected."
-
+      
     ),
     HTML(paste(collapse=' ',
-
+               
                '•	<strong> Totals versus adjusted rates</strong> .
 <br>
   Totals give a sense of actual people harmed (and sum over tracts when appropriate).
@@ -204,61 +204,60 @@ So Totals and Rates are each useful in different ways.
   )
 
 #### content_LifetimeHarm_Information ####
-content_LifetimeHarm_Information.html =
-  paste(collapse=' ',
-  '<br><h4> Lifetime harms</h4>
-  Two measures of harm refer to babies born in the year 2019:',
-  fluidRow(column(12, offset=1,
-                  '    •	Lifetime earnings lost')),
-  fluidRow(column(12, offset=1,
-                  '    •	IQ points lost')),
-  '
-  These estimates are calculated from externally validated models
-  using our birth cohort counts for 2019.
-  <br>
-  "Birth cohort" refers to the number of babies born in a tract or community in 2019.
-  <br>
-  (The estimates are not obtained by fitting IQ or earnings data over our region.)
-  <br>
-  Details are in the research article
-  <a href=https://annalsofglobalhealth.org/articles/10.5334/aogh.5145 target=_blank>
-  <br>
-  Particulate Air Pollution, Disease, and Death in the Cities and Towns of Southwestern Pennsylvania,
-  <br>
-  <strong>
-E. M. Whitman,
-L. Bryan,
-S. Sehdev,
-P. J. Landrigan
-</strong></a>
-  <br><br>
-  <h4>Using IQ as an indicator of environmental harms</h4>
-      <br>
-      The conclusions of the study concerning IQ are, in brief:
+#content_LifetimeHarm_Information.html =
+#paste(collapse=' ',
+#'<br><h4> Lifetime harms</h4>
+#Two measures of harm refer to babies born in the year 2019:',
+#fluidRow(column(12, offset=1,
+#                '    •	Lifetime earnings lost')),
+#fluidRow(column(12, offset=1,
+#                '    •	IQ points lost')),
+#'
+#These estimates are calculated from externally validated models
+#using our birth cohort counts for 2019.
+#<br>
+#"Birth cohort" refers to the number of babies born in a tract or community in 2019.
+#<br>
+#(The estimates are not obtained by fitting IQ or earnings data over our region.)
+#<br>
+#Details are in the research article
+#<a href=https://annalsofglobalhealth.org/articles/10.5334/aogh.5145 target=_blank>
+#<br>
+#Particulate Air Pollution, Disease, and Death in the Cities and Towns of Southwestern Pennsylvania,
+#<br>
+#<strong>
+#E. M. Whitman,
+#L. Bryan,
+#S. Sehdev,
+#P. J. Landrigan
+#</strong></a>
+#<br><br>
+#<h4>Using IQ as an indicator of environmental harms</h4>
+#<br>
+#The conclusions of the study concerning IQ are, in brief:
 
-      <blockquote style="font-size:smaller;">
-      Among the 24,604 children born in the Pittsburgh MSA in 2019,<br>
-      PM2.5 pollution was linked to the loss of 60,668 full‑scale IQ points,<br>
-      resulting in estimated lifetime economic losses of $2.7 billion.
-      </blockquote>
+#<blockquote style="font-size:smaller;">
+#Among the 24,604 children born in the Pittsburgh MSA in 2019,<br>
+#PM2.5 pollution was linked to the loss of 60,668 full‑scale IQ points,<br>
+#resulting in estimated lifetime economic losses of $2.7 billion.
+#</blockquote>
 
-      For details extracted from the Whitman et al article,
-      <a href="article-results-on-IQ.html" target=_blank> click here . </a>
-  <br>However, IQ has a history of being abused in regard to both race and sex.
+#For details extracted from the Whitman et al article,
+#<a href="article-results-on-IQ.html" target=_blank> click here . </a>
+#<br>However, IQ has a history of being abused in regard to both race and sex.
 
-    '
-  )
+#'
+#)
 
 content_LifetimeHarm_Information = div(
-  HTML(paste(collapse=' ',
-             content_LifetimeHarm_Information.html)),
-  hr(),
-  h4( "Concerns about the abuse of IQ to advance racist doctrines"),
+  #HTML(paste(collapse=' ',
+  #content_LifetimeHarm_Information.html)),
+  #hr(),
+  h4( "Economic Impact/IQ"),
   #  <a href="IQ-faq.html" target=_blank> click here . </a>
   includeHTML('www/IQ-faq.html')
-
-  )
-
+)
+#)
 
 
 
