@@ -116,7 +116,8 @@ fluidPage(
                                     popify(title='When a selected tract has more than one community:',
                                            content=
                                              div(style='font-size:6px !important; container:body !important',
-                                                 HTML('If "Include shared communities?" is CHECKED <br> ____ includes all census tract data for the selected community, even if some tracts contain sections of nearby communities.<hr> If "Include shared communities?" is NOT checked<br> ____ excludes census tract data that contains other communities. This shows only pure data for the selected community, but may miss some areas on your communitys edges.'
+                                                 HTML('If "Include shared communities?" is CHECKED <br> It includes all census tract data for the selected community, even if some tracts contain sections of nearby communities. This gives a more complete picture, but may include some neighboring community data.
+                                                  <hr> If "Include shared communities?" is NOT checked<br>It excludes census tract data that contains other communities. This shows only pure data for the selected community, but may miss some areas on your community edges.'
                                                  )),
                                            checkboxInput("Id_townSharesCheckbox",
                                                          'Include shared communities?'
